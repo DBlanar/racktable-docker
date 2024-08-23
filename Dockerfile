@@ -26,6 +26,7 @@ RUN mkdir /var/www/html/doc
 RUN curl -L https://github.com/RackTables/racktables/archive/refs/heads/maintenance-0.21.x.tar.gz | tar xz \
     && mv racktables-maintenance-0.21.x/* /var/www/html/doc
 
+RUN rm -dr racktables-maintenance-0.21.x
 RUN mv /var/www/html/doc/wwwroot/* /var/www/html/
 
 # Set permissions
